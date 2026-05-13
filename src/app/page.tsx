@@ -308,7 +308,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <p className="section-label">BlueArkive Inference Engine</p>
@@ -412,7 +412,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <p className="section-label">Built for how you work.</p>
@@ -459,7 +459,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <h2 className="section-title">
@@ -519,7 +519,7 @@ export default function Home() {
               key={i}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-10%" }}
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: i * 0.1 } },
@@ -544,7 +544,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-10% 0px" }}
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } },
@@ -581,7 +581,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <p className="section-label">Sovereignty over your context.</p>
@@ -723,7 +723,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <p className="section-label">Claim your sovereign node.</p>
@@ -783,7 +783,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10% 0px" }}
           variants={fadeUp}
         >
           <h2 className="section-title" style={{ textAlign: 'center' }}>

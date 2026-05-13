@@ -1,6 +1,6 @@
 :root {
-  --font-display: 'Poppins', sans-serif;
-  --font-serif: 'Source Serif 4', serif;
+  --font-display: var(--font-poppins), sans-serif;
+  --font-serif: var(--font-source-serif), serif;
   --radius: 1rem;
   --radius-xl: 1.5rem;
   --radius-2xl: 2.5rem;
@@ -866,4 +866,24 @@ textarea.form-input {
   .form-grid-2 {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+.liquid-glass, .liquid-glass-strong, .hero-nav, .role-card, .feature-card {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force hardware acceleration */
+  backface-visibility: hidden;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
 }

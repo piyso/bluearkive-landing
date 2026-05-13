@@ -92,7 +92,7 @@ export function MembershipApplication() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10%" }}
           className="liquid-glass"
           style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', borderRadius: '9999px', marginBottom: '1.5rem' }}
         >
@@ -105,7 +105,7 @@ export function MembershipApplication() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10%" }}
           transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="section-title"
         >
@@ -115,7 +115,7 @@ export function MembershipApplication() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10%" }}
           transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="section-desc centered"
         >
@@ -127,7 +127,7 @@ export function MembershipApplication() {
         className="enterprise-card liquid-glass-strong"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-10%" }}
         transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         style={{ padding: 0, overflow: 'hidden' }}
       >
