@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function ApplyPage() {
   return (
-    <main className="min-h-screen relative flex flex-col">
+    <main>
       {/* ═══ VIDEO BACKGROUND ═══ */}
       <video className="video-bg" autoPlay muted loop playsInline>
         <source
@@ -15,18 +15,20 @@ export default function ApplyPage() {
       <div className="video-overlay" />
 
       {/* ═══ MINIMAL NAV ═══ */}
-      <nav className="relative z-50 flex items-center justify-between px-8 py-6">
+      <nav className="hero-nav scrolled" id="main-nav">
         <Link href="/" className="nav-logo">
           <Image src="/logo.svg" alt="BlueArkive Logo" width={32} height={32} />
           BlueArkive
         </Link>
-        <Link href="/" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
-          Return to Core
-        </Link>
+        <div className="nav-links">
+          <Link href="/" className="btn-secondary liquid-glass" style={{ padding: '0.5rem 1.5rem', fontSize: '0.8125rem' }}>
+            Return to Core
+          </Link>
+        </div>
       </nav>
 
       {/* ═══ CONTENT ═══ */}
-      <div className="flex-1 relative z-10 flex flex-col justify-center py-12">
+      <div className="content-layer" style={{ padding: '8rem 2rem 4rem', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <MembershipApplication />
       </div>
     </main>
