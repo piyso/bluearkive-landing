@@ -20,28 +20,56 @@ export function MembershipApplication() {
   const [isSuccess, setIsSuccess] = useState(false)
   const [submitStep, setSubmitStep] = useState(0)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStep(0)
     
-    // Simulate terminal steps
-    let step = 0
-    const interval = setInterval(() => {
-      step++
-      setSubmitStep(step)
-      if (step >= SUBMIT_MESSAGES.length - 1) {
-        clearInterval(interval)
-        setTimeout(() => {
-          setIsSubmitting(false)
-          setIsSuccess(true)
-          setTimeout(() => {
-            setIsSuccess(false)
-            setSubmitStep(0)
-          }, 4000)
-        }, 800)
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      type: activeForm,
+      fullName: formData.get('fullName'),
+      firm: formData.get('firm'),
+      email: formData.get('email'),
+      role: formData.get('role') || 'Not specified',
+      intent: formData.get('intent') || 'None provided'
+    }
+
+    try {
+      // Simulate terminal steps immediately
+      let step = 0
+      const interval = setInterval(() => {
+        step++
+        setSubmitStep(step)
+        if (step >= SUBMIT_MESSAGES.length - 1) {
+          clearInterval(interval)
+        }
+      }, 600)
+
+      // Actually POST to the backend
+      const res = await fetch('/api/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+
+      if (!res.ok) {
+        console.error("Failed to send email", await res.text())
       }
-    }, 600)
+
+      // Wait a moment for terminal to finish if fetch was fast
+      setTimeout(() => {
+        setIsSubmitting(false)
+        setIsSuccess(true)
+        setTimeout(() => {
+          setIsSuccess(false)
+          setSubmitStep(0)
+        }, 4000)
+      }, 3500)
+    } catch (err) {
+      console.error(err)
+      setIsSubmitting(false)
+    }
   }
 
   const containerVariants = {
@@ -194,24 +222,24 @@ export function MembershipApplication() {
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Full Name</label>
                       <User className="form-icon" />
-                      <input type="text" required className="form-input" placeholder="John Doe" />
+                      <input type="text" name="fullName" required className="form-input" placeholder="John Doe" />
                     </motion.div>
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Firm / Organization</label>
                       <Building className="form-icon" />
-                      <input type="text" required className="form-input" placeholder="Acme Corp" />
+                      <input type="text" name="firm" required className="form-input" placeholder="Acme Corp" />
                     </motion.div>
                   </div>
 
                   <motion.div variants={itemVariants} className="form-group">
                     <label className="form-label">Work Email Identifier</label>
                     <Mail className="form-icon" />
-                    <input type="email" required className="form-input" placeholder="john@acmecorp.com" />
+                    <input type="email" name="email" required className="form-input" placeholder="john@acmecorp.com" />
                   </motion.div>
 
                   <motion.div variants={itemVariants} className="form-group">
                     <label className="form-label">Statement of Intent (Optional)</label>
-                    <textarea className="form-input" placeholder="Briefly describe your interest in sovereign infrastructure..." />
+                    <textarea name="intent" className="form-input" placeholder="Briefly describe your interest in sovereign infrastructure..." />
                   </motion.div>
 
                   <motion.div variants={itemVariants} style={{ paddingTop: '1.5rem' }}>
@@ -239,12 +267,12 @@ export function MembershipApplication() {
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Full Name</label>
                       <User className="form-icon" />
-                      <input type="text" required className="form-input" placeholder="Jane Doe" />
+                      <input type="text" name="fullName" required className="form-input" placeholder="Jane Doe" />
                     </motion.div>
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Company / Firm</label>
                       <Building className="form-icon" />
-                      <input type="text" required className="form-input" placeholder="Global Ventures" />
+                      <input type="text" name="firm" required className="form-input" placeholder="Global Ventures" />
                     </motion.div>
                   </div>
 
@@ -252,11 +280,11 @@ export function MembershipApplication() {
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Work Email</label>
                       <Mail className="form-icon" />
-                      <input type="email" required className="form-input" placeholder="jane@globalventures.com" />
+                      <input type="email" name="email" required className="form-input" placeholder="jane@globalventures.com" />
                     </motion.div>
                     <motion.div variants={itemVariants} className="form-group">
                       <label className="form-label">Role</label>
-                      <select required defaultValue="" className="form-input" style={{ appearance: 'none', paddingLeft: '1rem' }}>
+                      <select name="role" required defaultValue="" className="form-input" style={{ appearance: 'none', paddingLeft: '1rem' }}>
                         <option value="" disabled>Select Role...</option>
                         <option value="executive" style={{ background: '#0a0e1a' }}>Executive / C-Suite</option>
                         <option value="investor" style={{ background: '#0a0e1a' }}>Investor / Partner</option>
@@ -269,7 +297,7 @@ export function MembershipApplication() {
 
                   <motion.div variants={itemVariants} className="form-group">
                     <label className="form-label">How Can We Assist You?</label>
-                    <textarea className="form-input" placeholder="Please provide details about your use case..." />
+                    <textarea name="intent" className="form-input" placeholder="Please provide details about your use case..." />
                   </motion.div>
 
                   <motion.div variants={itemVariants} style={{ paddingTop: '1.5rem' }}>
