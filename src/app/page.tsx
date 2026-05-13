@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import { Logo3D } from '../components/Logo3D'
 import { VocMarquee } from '../components/Marquee'
+import { MembershipApplication } from '../components/MembershipApplication'
 import Image from 'next/image'
 
 /* ─── animation variants ─── */
@@ -155,6 +156,7 @@ export default function Home() {
           <a href="#features">Architecture</a>
           <a href="#trust">Security</a>
           <a href="#pricing">Nodes</a>
+          <a href="#apply">Enterprise</a>
           <a href="#download" className="nav-cta liquid-glass-strong">
             Initialize Core
           </a>
@@ -193,6 +195,9 @@ export default function Home() {
             </a>
             <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>
               Nodes
+            </a>
+            <a href="#apply" onClick={() => setMobileMenuOpen(false)}>
+              Enterprise
             </a>
             <a href="#download" onClick={() => setMobileMenuOpen(false)}>
               Initialize Core
@@ -254,7 +259,7 @@ export default function Home() {
 
           <div className="hero-actions">
             <a
-              href="https://dl.bluearkive.com/BlueArkive-0.3.3-mac-arm64.dmg"
+              href="https://dl.bluearkive.com/BlueArkive-0.3.5-beta-mac-arm64.dmg"
               className="btn-primary liquid-glass-strong"
             >
               <span className="icon-circle">
@@ -762,7 +767,7 @@ export default function Home() {
             </ul>
 
             <a
-              href="https://dl.bluearkive.com/BlueArkive-0.3.3-mac-arm64.dmg"
+              href="https://dl.bluearkive.com/BlueArkive-0.3.5-beta-mac-arm64.dmg"
               className="btn-primary liquid-glass-strong"
               style={{ width: '100%', justifyContent: 'center' }}
             >
@@ -771,6 +776,9 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* ═══ ENTERPRISE APPLICATION ═══ */}
+      <MembershipApplication />
 
       {/* ═══ DOWNLOAD ═══ */}
       <section className="section-pad content-layer download-section" id="download">
@@ -798,7 +806,7 @@ export default function Home() {
 
           <div className="download-card liquid-glass-strong">
             <a
-              href="https://dl.bluearkive.com/BlueArkive-0.3.3-mac-arm64.dmg"
+              href="https://dl.bluearkive.com/BlueArkive-0.3.5-beta-mac-arm64.dmg"
               className="download-btn liquid-glass-strong"
               style={{ width: '100%', justifyContent: 'center', textDecoration: 'none' }}
             >
@@ -807,7 +815,7 @@ export default function Home() {
             </a>
             <p className="download-meta">Apple Silicon · arm64 · 188 MB</p>
             <p className="download-alt">
-              <a href="https://dl.bluearkive.com/BlueArkive-0.3.3-mac-x64.dmg">
+              <a href="https://dl.bluearkive.com/BlueArkive-0.3.5-beta-mac-x64.dmg">
                 Download for Intel Mac instead (x64)
               </a>
             </p>
