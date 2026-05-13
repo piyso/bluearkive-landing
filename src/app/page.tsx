@@ -17,7 +17,6 @@ import {
 } from 'lucide-react'
 import { Logo3D } from '../components/Logo3D'
 import { VocMarquee } from '../components/Marquee'
-import { MembershipApplication } from '../components/MembershipApplication'
 import Image from 'next/image'
 
 /* ─── animation variants ─── */
@@ -156,7 +155,7 @@ export default function Home() {
           <a href="#features">Architecture</a>
           <a href="#trust">Security</a>
           <a href="#pricing">Nodes</a>
-          <a href="#apply">Enterprise</a>
+          <a href="/apply">Enterprise</a>
           <a href="#download" className="nav-cta liquid-glass-strong">
             Initialize Core
           </a>
@@ -196,7 +195,7 @@ export default function Home() {
             <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>
               Nodes
             </a>
-            <a href="#apply" onClick={() => setMobileMenuOpen(false)}>
+            <a href="/apply" onClick={() => setMobileMenuOpen(false)}>
               Enterprise
             </a>
             <a href="#download" onClick={() => setMobileMenuOpen(false)}>
@@ -777,8 +776,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ═══ ENTERPRISE APPLICATION ═══ */}
-      <MembershipApplication />
+      {/* ═══ ENTERPRISE APPLICATION MOVED TO /APPLY ═══ */}
 
       {/* ═══ DOWNLOAD ═══ */}
       <section className="section-pad content-layer download-section" id="download">
