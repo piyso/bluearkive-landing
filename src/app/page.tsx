@@ -875,16 +875,12 @@ export default function Home() {
               <h4>Trust</h4>
               <a href="#trust">Architecture &amp; Security</a>
               <a
-                href="https://github.com/piyso/Meeting/blob/main/SECURITY.md"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/privacy"
               >
                 Privacy Policy
               </a>
               <a
-                href="https://github.com/piyso/Meeting/blob/main/LICENSE.md"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/terms"
               >
                 Terms of Service
               </a>
