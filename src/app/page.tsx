@@ -98,7 +98,7 @@ export default function Home() {
       id: 'knowledge-workers',
       label: 'Knowledge Workers',
       title: 'Continuous Cognitive Synthesis',
-      desc: 'The Sovereign Memory Fabric autonomously monitors context, synthesizing fragmented data streams into unified, queryable knowledge graphs.',
+      desc: 'BlueArkive autonomously monitors context, synthesizing fragmented data streams into unified, queryable knowledge graphs.',
       pre: '+ Agent: Knowledge Graph Compiler\n  - Action: Synthesize Q3 roadmap\n  - Result: 14 dependencies resolved automatically',
     },
     {
@@ -140,8 +140,8 @@ export default function Home() {
       {/* ═══ NAV ═══ */}
       <nav className={`hero-nav ${scrolled ? 'scrolled' : ''}`} id="main-nav">
         <a href="#hero" className="nav-logo">
-          <Image src="/logo.svg" alt="Sovereign Logo" width={32} height={32} />
-          Sovereign
+          <Image src="/logo.svg" alt="BlueArkive Logo" width={32} height={32} />
+          BlueArkive
         </a>
         <div className="nav-links">
           <a href="#features">Architecture</a>
@@ -300,7 +300,7 @@ export default function Home() {
           viewport={{ once: true, margin: '-10% 0px' }}
           variants={fadeUp}
         >
-          <p className="section-label">Sovereign Inference Engine</p>
+          <p className="section-label">BlueArkive Inference Engine</p>
           <h2 className="section-title">Ambient Context Stream:</h2>
 
           <div className="engine-demo liquid-glass-strong">
@@ -407,7 +407,7 @@ export default function Home() {
         >
           <p className="section-label">Built for how you work.</p>
           <h2 className="section-title">
-            The Sovereign Fabric adapts its inference engine
+            BlueArkive adapts its inference engine
             <br />
             to your role, extracting exactly
             <br />
@@ -580,7 +580,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th></th>
-                  <th>Sovereign Fabric (Safe)</th>
+                  <th>BlueArkive (Safe)</th>
                   <th>Cloud AI (Risky)</th>
                 </tr>
               </thead>
@@ -653,7 +653,7 @@ export default function Home() {
                         fontSize: '0.9rem',
                       }}
                     >
-                      Core Sovereign Architecture
+                      Core BlueArkive Architecture
                     </h4>
                     <ul
                       style={{
@@ -759,7 +759,7 @@ export default function Home() {
           style={{ textAlign: 'center' }}
         >
           <h2 className="section-title">
-            Initialize <em>Sovereign.</em>
+            Initialize <em>BlueArkive.</em>
           </h2>
           <p className="section-desc centered">Autonomous. Private. No cloud. Yours forever.</p>
           <p
@@ -836,8 +836,8 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-brand">
             <a href="#hero" className="nav-logo" style={{ fontSize: '1.25rem' }}>
-              <Image src="/logo.svg" alt="Sovereign Logo" width={24} height={24} />
-              Sovereign
+              <Image src="/logo.svg" alt="BlueArkive Logo" width={24} height={24} />
+              BlueArkive
             </a>
             <p>The sovereign memory fabric.</p>
           </div>
@@ -870,7 +870,7 @@ export default function Home() {
             <span className="footer-badge liquid-glass">100% Offline</span>
             <span className="footer-badge liquid-glass">No Account Required</span>
           </div>
-          <p className="footer-copy">© 2026 Sovereign. All rights reserved.</p>
+          <p className="footer-copy">© 2026 BlueArkive. All rights reserved.</p>
         </div>
       </footer>
     </main>

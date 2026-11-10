@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 /**
- * Sovereign Intake API
+ * BlueArkive Intake API
  *
  * Microsoft has disabled basic SMTP auth (535 5.7.139) on Outlook.com.
  * Instead of SMTP, this route:
@@ -118,7 +118,7 @@ function mailtoHref(email: string): string {
 function buildHtml(data: IntakeData): string {
   return `
     <div style="font-family: 'Courier New', Courier, monospace; background-color: #0a0e1a; color: #4ade80; padding: 20px; border-radius: 8px;">
-      <h2 style="color: white; border-bottom: 1px solid #4ade80; padding-bottom: 10px;">🛡️ Sovereign Intake: New Application</h2>
+      <h2 style="color: white; border-bottom: 1px solid #4ade80; padding-bottom: 10px;">🛡️ BlueArkive Intake: New Application</h2>
       <p><strong>Type:</strong> ${data.type === 'access' ? 'Private Access Request' : 'Private Demo'}</p>
       <p><strong>Name:</strong> ${escapeHtml(data.fullName)}</p>
       <p><strong>Firm:</strong> ${escapeHtml(data.firm || 'N/A')}</p>
@@ -183,7 +183,7 @@ async function sendViaWebhook(data: IntakeData): Promise<boolean> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...data,
-        text: `🛡️ *New Sovereign Intake*\n*Name:* ${line(data.fullName)}\n*Email:* ${line(data.email)}\n*Firm:* ${line(data.firm)}\n*Role:* ${line(data.role)}\n*Type:* ${data.type}\n*Intent:* ${line(data.intent)}`,
+        text: `🛡️ *New BlueArkive Intake*\n*Name:* ${line(data.fullName)}\n*Email:* ${line(data.email)}\n*Firm:* ${line(data.firm)}\n*Role:* ${line(data.role)}\n*Type:* ${data.type}\n*Intent:* ${line(data.intent)}`,
       }),
       signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS),
     })
