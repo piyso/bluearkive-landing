@@ -226,7 +226,7 @@ export default function Home() {
           </div>
 
           <h1>
-            The Sovereign
+            BlueArkive
             <br />
             <em>Memory Fabric.</em>
           </h1>

@@ -132,7 +132,7 @@ function buildHtml(data: IntakeData): string {
 
       <p style="margin-top: 30px; font-size: 12px; color: rgba(255,255,255,0.4);">
         BlueArkive Automated System<br/>
-        Sovereign Memory Fabric
+        BlueArkive Memory Fabric
       </p>
     </div>
   `
