@@ -20,9 +20,9 @@ const sourceSerif4 = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: 'BlueArkive — The Memory Fabric',
+  title: 'BlueArkive — Private AI meeting notes',
   description:
-    'Private AI meeting notes that run 100% locally on your machine. No bots. No cloud. No fees. Free forever.',
+    'Private AI meeting notes that run on your own computer. No bot joins the call. Meeting memory powered by PiyAPI. Free forever.',
 }
 
 export default function RootLayout({

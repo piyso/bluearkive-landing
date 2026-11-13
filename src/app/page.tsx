@@ -72,7 +72,7 @@ export default function Home() {
   const engineTextRef = useRef<HTMLParagraphElement>(null)
 
   const typedText = useTypingAnimation(
-    'agent system initialized... ambient context ingestion active... synthesizing autonomous workflow graph...',
+    'listening... transcribing... noting what was decided and who took on what...',
     25,
     engineTextRef
   )
@@ -97,30 +97,30 @@ export default function Home() {
     {
       id: 'knowledge-workers',
       label: 'Knowledge Workers',
-      title: 'Continuous Cognitive Synthesis',
-      desc: 'BlueArkive autonomously monitors context, synthesizing fragmented data streams into unified, queryable knowledge graphs.',
-      pre: '+ Agent: Knowledge Graph Compiler\n  - Action: Synthesize Q3 roadmap\n  - Result: 14 dependencies resolved automatically',
+      title: 'Every meeting, already summarized',
+      desc: 'A short summary, the decisions and every task with its owner, written when the meeting ends. Ask "What did we decide?" and get the answer from any past meeting.',
+      pre: '+ Meeting: Q3 roadmap review\n  - Decided: Ship the paywall behind a flag\n  - Task: Priya sends the release notes by Friday',
     },
     {
       id: 'engineers',
       label: 'Engineers',
-      title: 'Autonomous System Architecture',
-      desc: 'Never write a ticket again. The fabric converts technical discussions into actionable engineering epics, generating PRs and resolving blockers.',
-      pre: '+ Agent: Architecture Synthesizer\n  - Decision: Migrate to Rust microservices\n  - Action: Generate boilerplate & open PR',
+      title: 'Decisions and tasks, not walls of text',
+      desc: 'Technical discussions become clear decisions and tasks with owners, checked against what was actually said, so nothing is made up.',
+      pre: '+ Meeting: Architecture sync\n  - Decided: Keep Postgres, add a read replica\n  - Task: Rishi writes the migration plan by Monday',
     },
     {
       id: 'executives',
       label: 'Executives',
-      title: 'Strategic Pattern Recognition',
-      desc: 'Ambient intelligence that connects the dots across the enterprise. Detects market shifts and internal friction points before they materialize.',
-      pre: '+ Agent: Strategic Analyzer\n  - Insight: 40% increase in security objections\n  - Action: Generate new compliance battlecard',
+      title: 'Know what was decided, across every meeting',
+      desc: 'Tips during the call, and a record you can search afterwards, of what each team decided and who owns what.',
+      pre: '+ Tip during the call\n  - From before: Pricing was set at 499 on 4 November\n  - Open: Nobody owns the board update yet',
     },
     {
       id: 'researchers',
       label: 'Researchers',
-      title: 'Infinite Context Windows',
-      desc: 'Process thousands of papers instantly. The fabric cross-references methodologies and generates novel hypotheses based on semantic overlap.',
-      pre: '+ Agent: Hypothesis Generator\n  - Finding: Overlap in 3 recent neural architecture papers\n  - Output: Synthesized proposal for new attention mechanism',
+      title: 'Interviews in eight languages',
+      desc: 'Transcribes English, Hindi, Chinese, Japanese, Korean, Spanish, French and German, and lets you search what was said.',
+      pre: '+ Interview: User study #12 (Hindi)\n  - Summary: Pricing page was confusing\n  - Search: Found in English and in Hindi',
     },
   ]
 
@@ -207,7 +207,7 @@ export default function Home() {
         >
           <div className="hero-badge liquid-glass">
             <span className="dot" />
-            v0.3.5 CORE ONLINE
+            v0.3.5 EARLY ACCESS
             <span
               style={{
                 marginLeft: '8px',
@@ -228,7 +228,7 @@ export default function Home() {
           <h1>
             BlueArkive
             <br />
-            <em>Memory Fabric.</em>
+            <em>Private AI meeting notes.</em>
           </h1>
 
           <p
@@ -240,12 +240,13 @@ export default function Home() {
               color: 'rgba(200,220,255,0.6)',
             }}
           >
-            Constructing the autonomous agentic web.
+            Meeting memory powered by PiyAPI.
           </p>
 
           <p className="hero-sub">
-            Infinite recall, zero dependencies. 100% offline inference with zero external telemetry.
-            The foundational cognitive substrate for on-device autonomous agents.
+            BlueArkive records, transcribes and summarizes your meetings on your own computer, and no
+            bot joins the call. PiyAPI, the memory fabric behind it, keeps every decision, task and
+            word one question away.
           </p>
 
           <div className="hero-actions">
@@ -253,10 +254,10 @@ export default function Home() {
               <span className="icon-circle">
                 <Sparkles style={{ width: 14, height: 14 }} />
               </span>
-              Initialize Node
+              Request early access
             </a>
             <a href="#features" className="btn-secondary">
-              Explore Substrate
+              See how it works
               <ArrowRight style={{ width: 16, height: 16 }} />
             </a>
           </div>
@@ -276,7 +277,7 @@ export default function Home() {
               letterSpacing: '0.05em',
             }}
           >
-            ✓ FREE FOREVER: Zero cost. Zero cloud. Local processing.
+            ✓ FREE FOREVER: Zero cost. Runs on your computer. No cloud needed.
           </p>
           <p
             style={{
@@ -286,7 +287,7 @@ export default function Home() {
               letterSpacing: '0.05em',
             }}
           >
-            🧪 v0.3.5 Beta — Production-hardened. 11 forensic fixes. Help us shape the future.
+            🧪 v0.3.5 Beta — tested hard and still improving. Help us shape it.
           </p>
         </motion.div>
       </section>
@@ -300,8 +301,8 @@ export default function Home() {
           viewport={{ once: true, margin: '-10% 0px' }}
           variants={fadeUp}
         >
-          <p className="section-label">BlueArkive Inference Engine</p>
-          <h2 className="section-title">Ambient Context Stream:</h2>
+          <p className="section-label">Live in your meeting</p>
+          <h2 className="section-title">While you talk:</h2>
 
           <div className="engine-demo liquid-glass-strong">
             <div
@@ -351,7 +352,7 @@ export default function Home() {
                         gap: '6px',
                       }}
                     >
-                      <CheckCircle style={{ width: 14, height: 14 }} /> Autonomous Action Generated
+                      <CheckCircle style={{ width: 14, height: 14 }} /> Meeting notes ready
                     </h4>
                     <ul
                       style={{
@@ -364,16 +365,16 @@ export default function Home() {
                       }}
                     >
                       <li>
-                        <strong style={{ color: 'white' }}>Node Alpha:</strong> Extracted critical
-                        dependencies
+                        <strong style={{ color: 'white' }}>Decided:</strong> Launch moves to 17
+                        November
                       </li>
                       <li style={{ color: 'rgba(180,255,180,1)' }}>
-                        <strong style={{ color: 'white' }}>Workflow:</strong> Auto-generating
-                        architectural schematics
+                        <strong style={{ color: 'white' }}>Task:</strong> Karen tells the board by
+                        Thursday
                       </li>
                       <li>
-                        <strong style={{ color: 'white' }}>Status:</strong> Compiled and locked in
-                        local memory enclave
+                        <strong style={{ color: 'white' }}>Saved:</strong> Encrypted on this
+                        computer, searchable any time
                       </li>
                     </ul>
                   </motion.div>
@@ -382,10 +383,10 @@ export default function Home() {
             </div>
             <div className="engine-stats">
               {[
-                { val: '0 Bytes', label: 'Sent to the cloud' },
+                { val: '0 Bytes', label: 'Sent to the cloud by default' },
                 { val: 'AES-256', label: 'Military-grade encryption' },
-                { val: 'Instant', label: 'Local execution speed' },
-                { val: '100%', label: 'Offline uptime guarantee' },
+                { val: 'Live', label: 'Transcribed as you speak' },
+                { val: '100%', label: 'Works offline' },
               ].map(stat => (
                 <div key={stat.label} className="engine-stat liquid-glass">
                   <span className="val">{stat.val}</span>
@@ -407,9 +408,9 @@ export default function Home() {
         >
           <p className="section-label">Built for how you work.</p>
           <h2 className="section-title">
-            BlueArkive adapts its inference engine
+            BlueArkive listens to your meetings
             <br />
-            to your role, extracting exactly
+            and pulls out exactly
             <br />
             what you need <em>without being asked.</em>
           </h2>
@@ -470,24 +471,24 @@ export default function Home() {
           {[
             {
               icon: Cpu,
-              title: 'Cognitive Substrate',
-              desc: '100% local inference. Absolute neural independence.',
+              title: 'On your computer',
+              desc: 'Recording, transcription and summaries run locally. No bot joins the call.',
               hoverClass: 'group-hover:border-emerald-500/30 group-hover:bg-emerald-500/10 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]',
               iconHover: 'group-hover:text-emerald-400',
               textHover: 'group-hover:text-emerald-300'
             },
             {
               icon: Search,
-              title: 'Infinite Recall',
-              desc: 'Seamless ambient capture. Retrieve any thought instantly.',
+              title: 'Meeting memory',
+              desc: 'Powered by PiyAPI: search and ask across every meeting you have had.',
               hoverClass: 'group-hover:border-blue-500/30 group-hover:bg-blue-500/10 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.15)]',
               iconHover: 'group-hover:text-blue-400',
               textHover: 'group-hover:text-blue-300'
             },
             {
               icon: Sparkles,
-              title: 'Agentic Action',
-              desc: 'Proactive autonomy. Execute complex workflows entirely on-device.',
+              title: 'Live tips',
+              desc: 'Decisions, tasks and things you discussed before, shown during the call.',
               hoverClass: 'group-hover:border-amber-500/30 group-hover:bg-amber-500/10 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]',
               iconHover: 'group-hover:text-amber-400',
               textHover: 'group-hover:text-amber-300'
@@ -529,7 +530,7 @@ export default function Home() {
             </div>
             <h3 className="text-[0.8rem] font-bold tracking-[0.2em] uppercase text-slate-400 mb-4 transition-colors duration-500 group-hover:text-purple-300">Data Sovereignty</h3>
             <p className="text-[1.05rem] text-slate-300 font-light leading-relaxed max-w-[500px] mx-auto">
-              Cryptographic finality. Inexorably bound to your hardware enclave.
+              Encrypted on your computer. Your meetings leave it only if you choose to sync.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8 w-full max-w-[600px] mx-auto">
               {[
@@ -559,9 +560,9 @@ export default function Home() {
           <h2 className="section-title">
             While typical AI tools require uploading
             <br />
-            your meetings to their servers, our intelligence
+            your meetings to their servers, BlueArkive
             <br />
-            lives <em>entirely on your machine.</em>
+            does its work <em>on your machine.</em>
           </h2>
           <p className="section-desc centered" style={{ marginBottom: '2rem' }}>
             The Trust Test
@@ -697,7 +698,7 @@ export default function Home() {
           viewport={{ once: true, margin: '-10% 0px' }}
           variants={fadeUp}
         >
-          <p className="section-label">Claim your sovereign node.</p>
+          <p className="section-label">Get early access.</p>
           <h2 className="section-title">
             To ensure optimal performance and gather quality feedback,
             <br />
@@ -759,9 +760,9 @@ export default function Home() {
           style={{ textAlign: 'center' }}
         >
           <h2 className="section-title">
-            Initialize <em>BlueArkive.</em>
+            Try <em>BlueArkive.</em>
           </h2>
-          <p className="section-desc centered">Autonomous. Private. No cloud. Yours forever.</p>
+          <p className="section-desc centered">Private. On your computer. Yours forever.</p>
           <p
             style={{
               textAlign: 'center',
@@ -772,8 +773,8 @@ export default function Home() {
               margin: '0.75rem auto 0',
             }}
           >
-            The cognitive network is expanding. Submit your request for node activation, and our
-            system will provision your local installer within 24 hours.
+            We are opening access in small groups. Request access and we will email you a download
+            link within 24 hours.
           </p>
 
           <a
@@ -839,7 +840,7 @@ export default function Home() {
               <Image src="/logo.svg" alt="BlueArkive Logo" width={24} height={24} />
               BlueArkive
             </a>
-            <p>The sovereign memory fabric.</p>
+            <p>Private AI meeting notes, powered by PiyAPI.</p>
           </div>
           <div className="footer-cols">
             <div className="footer-col">

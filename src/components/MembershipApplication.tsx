@@ -27,7 +27,7 @@ const SUBMIT_MESSAGES = [
   'INITIATING SECURE HANDSHAKE...',
   'NEGOTIATING TLS 1.3 ENCRYPTION...',
   'VERIFYING IDENTITY SIGNATURE...',
-  'ALLOCATING SOVEREIGN NODE...',
+  'RESERVING YOUR SPOT...',
   'ACCESS GRANTED',
 ]
 
@@ -207,7 +207,7 @@ export function MembershipApplication() {
               color: 'rgba(255,255,255,0.8)',
             }}
           >
-            Private Allocation
+            Early Access
           </span>
         </motion.div>
 
@@ -228,7 +228,7 @@ export function MembershipApplication() {
           transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="section-desc centered"
         >
-          Select your preferred engagement model to begin the executive intake process.
+          Request access to try BlueArkive, or ask for a private demo for your team.
         </motion.p>
       </div>
 
@@ -461,7 +461,7 @@ export function MembershipApplication() {
                       name="intent"
                       defaultValue={draft.intent ?? ''}
                       className="form-input"
-                      placeholder="Briefly describe your interest in sovereign infrastructure..."
+                      placeholder="Briefly tell us how you would use BlueArkive in your meetings..."
                     />
                   </motion.div>
 
